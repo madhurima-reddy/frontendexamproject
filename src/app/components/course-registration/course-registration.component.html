@@ -1,0 +1,20 @@
+<body class= "container" style="background-color: white;"><div *ngIf="!showCourses">
+    <p>No Courses Found...Please contact Meghana..!!</p>
+</div>
+<div *ngIf="showCourses">
+    <table class="table border-dark ">
+        <tr>
+            <th>Course Id</th>
+            <th>Course Name</th>
+        </tr>
+        <tr *ngFor="let course of courses;">
+            <td>{{course.courseId}}</td>
+            <td>{{course.courseName}}</td>
+        </tr>
+    </table>
+    <div>
+        <input  type="text" placeholder="Enter Course ID" [(ngModel)]="courseId">
+        <button class="btn btn-success"  (click)="goToExamPage()">Submit</button>
+    </div>
+</div><br><br><br><br>
+</body>

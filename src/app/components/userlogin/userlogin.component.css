@@ -1,0 +1,51 @@
+body {
+ 
+    background-image: url(src\assets\bgg.jpeg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin-top: -1px;
+    background-position: center center;
+    text-align: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    height: 100%;
+    font-size: 20px;
+  }
+  .login-container {
+      height: 200%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+    
+      .login-img{
+        float: left;
+  
+      }
+      .login-id{
+        float:right;
+      }
+      .login-form {
+        width: 400px;
+        background-color:  white;
+        border-radius: 5px;
+      }
+        .form-btn-container {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+    
+          a {
+            font-size: 12px;
+          }
+        
+    div.login-id{
+  float: right;
+  margin-right:20% ;
+  margin-top: 10%;
+    }

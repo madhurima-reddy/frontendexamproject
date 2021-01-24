@@ -1,0 +1,165 @@
+<body>
+  <!-- <img class="img-responsive login-img" src='assets/register.jpg' style="margin-top: 10%;width: 10%;float:right;"> -->
+  <div *ngIf="flag1">
+    <form #registerUserForm="ngForm" class="jotform-form" accept-charset="utf-8" autocomplete="on">
+      <input type="hidden" name="formID" value="210013482870447" />
+      <input type="hidden" id="JWTContainer" value="" />
+      <input type="hidden" id="cardinalOrderNumber" value="" />
+      <div role="main" class="form-all">
+        <ul class="form-section page-section">
+          <div class="form-header-group header-default">
+            <div class="header-text httal htvam">
+              <h2 id="header_1" class="form-header" data-component="header">
+                <b> Examination Registration Form</b>
+              </h2>
+              <div id="subHeader_1" class="form-subHeader">
+                All information on this form is strictly confidential
+              </div>
+            </div>
+          </div>
+          <li class="form-line jf-required" data-type="control_fullname" id="id_7">
+            <label class="form-label form-label-left form-label-auto" id="label_7" for="first_7">
+            </label>
+            <div id="cid_7" class="form-input jf-required">
+              <div data-wrapper-react="true">
+                <span class="form-sub-label-container" style="vertical-align: top" data-input-type="first">
+                  <label class="form-sub-label" for="first_7" id="sublabel_7_first" style="min-height: 13px"
+                    aria-hidden="false">
+                    Full Name</label>
+                  <input width="50%" type="text" name="userName" class="form-textbox validate[required]" size="10"
+                    value="" data-component="first" aria-labelledby="label_7 sublabel_7_first" required
+                    [(ngModel)]="user.userName" />
+                </span>
+          <li>
+            <span class="form-sub-label-container" style="vertical-align: top" data-input-type="last"><label
+                class="form-sub-label" for="last_7" id="sublabel_7_last" style="min-height: 13px" aria-hidden="false">
+                Qualification</label>
+              <input type="text" id="last_7" name="qualification" class="form-textbox validate[required]" size="15"
+                value="" data-component="last" aria-labelledby="label_7 sublabel_7_last" required
+                [(ngModel)]="user.qualification" />
+            </span>
+          </li>
+          <li>
+            <span class="form-sub-label-container" style="vertical-align: top" data-input-type="last">
+              <label class="form-sub-label" for="last_8" id="sublabel_7_last" style="min-height: 13px"
+                aria-hidden="false">
+                Year of Completion</label>
+              <input type="text" id="last_8" name="yearOfCompletion" class="form-textbox validate[required]" size="15"
+                value="" data-component="last" aria-labelledby="label_7 sublabel_7_last" required
+                [(ngModel)]="user.yearOfCompletion" />
+            </span>
+          </li>
+      </div>
+  </div>
+  </li>
+
+  <li class="form-line form-line-column form-col-2 jf-required dob" data-type="control_birthdate" id="id_11">
+    <label class="form-label form-label-top" id="label_11" for="input_11">
+      Date of Birth
+      <span class="form-required"> * </span>
+    </label>
+    <div class="form-group">
+      <input style="width: 100%" type="date" class="form-control" placeholder="Enter dob" name="dateOfBirth"
+        [(ngModel)]="user.dateOfBirth" #dateOfBirth="ngModel" required
+        [class.is-invalid]="dateOfBirth.invalid && dateOfBirth.touched" />
+    </div>
+  </li>
+  <li class="form-line form-line-column form-col-1 form-line-column-clear jf-required" data-type="control_email"
+    id="id_8">
+    <label class="form-label form-label-top" id="label_8" for="input_8">
+      E-mail
+      <span class="form-required"> * </span>
+    </label>
+    <div id="cid_8" class="form-input-wide jf-required">
+      <input style="width: 100%" type="email" id="input_8" name="userEmail"
+        class="form-textbox validate[required, Email]" size="30" value="" placeholder="ex: myname@example.com"
+        data-component="email" aria-labelledby="label_8" required [(ngModel)]="user.userEmail" />
+    </div>
+  </li>
+
+  <li class="form-line form-line-column form-col-1 form-line-column-clear jf-required" data-type="control_email"
+    id="id_8">
+    <label class="form-label form-label-top" id="label_8" for="input_9">
+      Password
+      <span class="form-required"> * </span>
+    </label>
+    <div id="cid_8" class="form-input-wide jf-required">
+      <input style="width: 100%" type="password" id="input_9" name="userPassword"
+        class="form-textbox validate[required, Email]" size="10" value="" aria-labelledby="label_8"
+        [(ngModel)]="user.userPassword" ngModel pattern="[a-zA-Z ]*" />
+      <span class="error" *ngIf="form?.form?.controls?.userPassword?.valid">Password should contain 1 small letter,1
+        capital letter and 1
+        special character</span>
+      <br />
+    </div>
+  </li>
+  <li class="form-line form-line-column form-col-2" data-type="control_phone" id="id_10">
+    <label class="form-label form-label-top" id="label_10" for="input_10_area">
+      Mobile Phone Number
+    </label>
+    <div id="cid_10" class="form-input-wide">
+      <div data-wrapper-react="true">
+        <span class="form-sub-label-container" style="vertical-align: top" data-input-type="phone">
+          <input type="tel" id="input_10_phone" name="userPhone" class="form-textbox" value="" data-component="phone"
+            aria-labelledby="label_10 sublabel_10_phone" [(ngModel)]="user.userPhone" />
+        </span>
+      </div>
+    </div>
+  </li>
+  <li class="form-line" data-type="control_address" id="id_9">
+    <label class="form-label form-label-left form-label-auto" id="label_9" for="input_9_addr_line1">
+      City
+    </label>
+    <div id="cid_9" class="form-input">
+      <div summary="" class="form-address-table jsTest-addressField">
+        <div class="form-address-line-wrapper jsTest-address-line-wrapperField">
+          <span class="form-address-line form-address-city-line jsTest-address-lineField">
+            <span class="form-sub-label-container" style="vertical-align: top">
+              <input type="text" id="input_9_city" name="userCity" class="form-textbox form-address-city" value=""
+                data-component="city" aria-labelledby="label_9 sublabel_9_city" [(ngModel)]="user.userCity" />
+              <label class="form-sub-label" for="input_9_city" id="sublabel_9_city" style="min-height: 13px"
+                aria-hidden="false">
+                State
+              </label>
+            </span>
+          </span>
+          <span class="form-control-container mb-3 form-address-line form-address-state-line jsTest-address-lineField">
+            <span class="form-sub-label-container" style="vertical-align: top">
+              <input required class="form-control" type="text" id="input_9_state" name="userState"
+                class="form-textbox form-address-state" value="" data-component="state"
+                aria-labelledby="label_9 sublabel_9_state" [(ngModel)]="user.userState" />
+            </span>
+          </span>
+        </div>
+
+        <div class="form-address-line-wrapper jsTest-address-line-wrapperField"></div>
+      </div>
+    </div>
+  </li>
+  </ul>
+  <div class="form-line" data-type="control_button" id="id_2">
+    <div id="cid_2" class="form-input-wide">
+      <div style="margin-left: 50px" data-align="auto"
+        class="form-buttons-wrapper form-buttons-auto jsTest-button-wrapperField">
+        <button [disabled]="form?.form?.controls?.userPassword?.valid" id="input_2" type="submit"
+          class="form-submit-button submit-button jf-form-buttons jsTest-submitField" data-component="button"
+          data-content="" width="80%" style="margin-top: -300px;" (click)="registerUser()">
+          <b> Submit</b>
+        </button><br>
+        <a style="color: red; margin-left: 30%;font-size: 17px;" [routerLink]="['/userlogin']">Already registered? Login
+          here</a>
+
+      </div>
+    </div>
+  </div>
+  </div>
+  </form>
+  </div>
+  <div *ngIf="flag" style="background-color: white">
+    <h2 style="text-align: center">
+      <br /><br /><br /><br /><br /><br />{{ status }}
+    </h2>
+    <button class="btn-primary btn-lg mt-3" style="margin-left: 45%" type="submit" (click)="goBack()">
+      Go Back</button><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  </div>
+</body>

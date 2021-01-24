@@ -1,0 +1,20 @@
+<body><br><br>
+    
+    <H1 >Thank you for attempting the exam!!</H1>
+<div id ="pdf" class="repo2" style=" align-items: center;margin-left:180px ;">
+    <div class="repotext">
+        <h1> Report Card</h1>
+        <p>Score:&nbsp; {{score}}</p>
+        <p>Level: &nbsp; {{examLevel}} </p>
+        <p>Exam Course: &nbsp; {{courseId}} </p>
+        <p>Report Id:&nbsp; {{reportCardId}}</p>
+        <button  style="margin-left:20 ;" class="repo2button btn-success" (click)="onExit()">EXIT</button>
+    </div>
+</div>
+
+<br> <br> <br> <br> <br> 
+<div title="Share As PDF" (click)="exportAsPDF();">
+    <button class="btn-primary btn-lg" >Download Report Card</button>
+</div>
+<br> <br> <br> 
+</body>

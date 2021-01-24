@@ -1,0 +1,16 @@
+.err {
+    font-size: 10px;
+    color: red;
+  }
+  .container{
+  text-align: left;
+  background-color: white;
+  font-size: 20px;
+  
+  }
+  input,select,textarea,label{
+    
+    width: 80%;
+    
+    margin-left: 5%;
+  }

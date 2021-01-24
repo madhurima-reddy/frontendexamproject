@@ -1,0 +1,65 @@
+<body><br>
+    <div *ngIf="flag" style="width: 100%; background-color:cyan; height: 40%">
+      <h3 style="text-align: center">Level-{{ question.examLevel }}</h3>
+  
+      <div class="timer" style="
+          text-align: center;
+          font-weight: 700;
+          font-size: 3em;
+        ">
+        <h4 style="outline: black;">Remaining time:
+          <span id="minutes"> {{ timeLeftMin }} </span>Minutes
+          <span id="seconds"> {{ timeLeft }} </span>Seconds
+        </h4>
+      </div>
+    </div>
+    <div *ngIf="flag" style="margin-left: 5%;margin-right: 5%;">
+      <tr id="One">
+        <td style="font-size: 26px;">Question:&nbsp; {{ currentQuestion }}/{{ totalQuestions }}</td>
+      </tr>
+      <br />
+      <div style="background-color: rgb(194, 239, 241)">
+        <tr id="Two">
+          <td style="font-size: 26px;">Question:&nbsp; {{ question.description }}</td>
+        </tr>
+        <td style="font-size: 26px;">Options:&nbsp;</td>
+        <div class="mohan" style="float: left; margin-left: 8%; margin-top: -7%;">
+  
+          <table *ngIf="showtable">
+  
+            <tr id="Two">
+              <td><button [ngClass]="{'green':toggle}" name="option" value="{{optionOne}}"
+                  (click)="optionChange1($event)">{{question.optionOne}}</button></td>
+            </tr>
+            <tr id="Two">
+              <td><button [ngClass]="{'green':toggle1}" name="option" value="{{optionTwo}}"
+                  (click)="optionChange2($event)">{{question.optionTwo}}</button></td>
+            </tr>
+            <tr id="Two">
+              <td><button [ngClass]="{'green':toggle2}" name="option" value="{{optionThree}}"
+                  (click)="optionChange3($event)">{{question.optionThree}}</button></td>
+            </tr>
+            <tr id="Two">
+              <td><button [ngClass]="{'green':toggle3}" name="option" value="{{optionFour}}"
+                  (click)="optionChange4($event)">{{question.optionFour}}</button></td>
+            </tr>
+          </table>
+        </div>
+        <br> <br> <br> <br> <br> <br> <br> <br> <br> <br><br> <br>
+      </div>
+      <br />
+    </div>
+  
+  
+    <div class="nextFinish" style="align-items: center;">
+      <br /><br />
+      <p  style="font-size: 40px;font-weight: 700;" *ngIf="launch"><i><br><br>All the Best..!!<br><br></i></p>
+      <button *ngIf="launch" style="
+        background: linear-gradient(135deg, blue, cyan);" (click)="launchMethod()">Launch</button>
+      <button style="
+        background: linear-gradient(135deg, blue, cyan);" *ngIf="nextValue" (click)="nextButton()">Next</button>
+      <button style="
+        background: linear-gradient(135deg,  blue, cyan);" *ngIf="finish"
+        (click)="finishTest()">Finish</button><br><br><br>
+    </div>
+  </body>

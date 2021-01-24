@@ -1,0 +1,110 @@
+<div class="add-question-container container">
+    <br> <br>
+    <form #addQuestionForm="ngForm" class="add-question-form">
+      <h3 style="margin-left:40% ;">Add Question Page</h3>
+      <div>
+        <label for="course" class="form-label">Course</label>
+        <span class="err ml-2" *ngIf="
+            (form?.form?.controls?.courseId?.touched ||
+              form?.form?.controls?.courseId?.dirty ||
+              isFormSubmitted) &&
+            (form?.form?.controls?.courseId?.value == 0 ||
+              !form?.form?.controls?.courseId?.valid)
+          ">*Required</span>
+        <select required class="form-control mb-3" id="course" [(ngModel)]="question.courseId" name="courseId">
+          <option disabled value="0" required>Select Course</option>
+          <option [value]="course.courseId" *ngFor="let course of courses">
+            {{ course.courseName }}
+          </option>
+        </select>
+      </div>
+  
+      <div>
+        <label for="level" class="form-label">Exam Level</label>
+        <span class="err ml-2" *ngIf="
+            (form?.form?.controls?.examLevel?.touched ||
+              form?.form?.controls?.examLevel?.dirty ||
+              isFormSubmitted) &&
+            (form?.form?.controls?.examLevel?.value == 0 ||
+              !form?.form?.controls?.examLevel?.valid)
+          ">*Level is required</span>
+        <select class="form-control mb-3" id="level" [(ngModel)]="question.examLevel" name="examLevel">
+          <option disabled value="0">Select Level</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <!-- <option value="3">3</option> -->
+        </select>
+      </div>
+      <div class="form-control-container mb-3">
+        <label for="questionInput" class="form-label">Description</label>
+        <span class="err ml-2" *ngIf="
+            (form?.form?.controls?.description?.touched ||
+              form?.form?.controls?.description?.dirty ||
+              isFormSubmitted) &&
+            !form?.form?.controls?.description?.valid
+          ">*question is required</span>
+        <textarea class="form-control" id="questionInput" rows="3" [(ngModel)]="question.description" name="description"
+          required></textarea>
+      </div>
+      <div class="form-control-container mb-3">
+        <label for="optionOne" class="form-label">Option 1</label>
+        <span class="err ml-2" *ngIf="
+            (form?.form?.controls?.optionOne?.touched ||
+              form?.form?.controls?.optionOne?.dirty ||
+              isFormSubmitted) &&
+            !form?.form?.controls?.optionOne?.valid
+          ">*option 1 is required</span>
+        <input type="text" class="form-control" id="optionOne" [(ngModel)]="question.optionOne" name="optionOne"
+          required />
+      </div>
+      <div class="form-control-container mb-3">
+        <label for="optionTwo" class="form-label">Option 2</label>
+        <span class="err ml-2" *ngIf="
+            (form?.form?.controls?.optionTwo?.touched ||
+              form?.form?.controls?.optionTwo?.dirty ||
+              isFormSubmitted) &&
+            !form?.form?.controls?.optionTwo?.valid
+          ">*option 2 is required</span>
+        <input type="text" class="form-control" id="optionTwo" [(ngModel)]="question.optionTwo" name="optionTwo"
+          required />
+      </div>
+      <div class="form-control-container mb-3">
+        <label for="optionThree" class="form-label">Option 3</label>
+        <span class="err ml-2" *ngIf="
+            (form?.form?.controls?.optionThree?.touched ||
+              form?.form?.controls?.optionThree?.dirty ||
+              isFormSubmitted) &&
+            !form?.form?.controls?.optionThree?.valid
+          ">*option 3 is required</span>
+        <input type="text" class="form-control" id="optionThree" [(ngModel)]="question.optionThree" name="optionThree"
+          required />
+      </div>
+      <div class="form-control-container mb-3">
+        <label for="optionFour" class="form-label">Option 4</label>
+        <span class="err ml-2" *ngIf="
+            (form?.form?.controls?.optionFour?.touched ||
+              form?.form?.controls?.optionFour?.dirty ||
+              isFormSubmitted) &&
+            !form?.form?.controls?.optionFour?.valid
+          ">*option 4 is required</span>
+        <input type="text" class="form-control" id="optionFour" [(ngModel)]="question.optionFour" name="optionFour"
+          required />
+      </div>
+      <div class="form-control-container mb-3">
+        <label for="answer" class="form-label">Answer</label>
+        <span class="err ml-2" *ngIf="
+            (form?.form?.controls?.answer?.touched ||
+              form?.form?.controls?.answer?.dirty ||
+              isFormSubmitted) &&
+            !form?.form?.controls?.answer?.valid
+          ">*answer is required</span>
+        <input type="text" class="form-control" id="answer" [(ngModel)]="question.answer" name="answer" required />
+      </div>
+  
+      <div class="form-control-container form-btn-container">
+        <button class="btn btn-success btn-sm px-4" style="margin-left: 40%; ;" (click)="addQuestion()">
+          ADD
+        </button><br><br><br>
+      </div>
+    </form>
+  </div>

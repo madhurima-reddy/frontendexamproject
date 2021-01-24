@@ -1,0 +1,31 @@
+
+<body >
+    <br><div  class="container" *ngIf="showCourses">
+    <table class="table border-dark ">
+        <tr>
+            <th>Report Id</th>
+            <th>CurrentLevel</th>
+            <th>Level One Score</th>
+            <th>Level Two Score</th>
+            <th>Course Status</th>
+            <th>Course Id</th>
+            <th>User Id</th>
+        </tr>
+        <tr *ngFor="let report of reports">
+            <td>{{report.reportId}}</td>
+            <td>{{report.currentLevel}}</td>
+            <td>{{report.level1Score}}</td>
+            <td>{{report.level2Score}}</td>
+            <td>{{report.status}}</td>
+            <td>{{report.courseId}}</td>
+            <td>{{report.userId}}</td>
+        </tr>
+    </table>
+    <div>
+    <div><br><br><br><br><br><br><br>
+        <button style="margin-left: 0%;" type="submit" (click)="goBack()">Go Back</button>
+    </div><br><br><br><br><br>
+    </div>
+    </div>
+    
+    </body>

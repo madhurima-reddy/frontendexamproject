@@ -1,0 +1,44 @@
+<body class="container">
+  <form>
+  <div class="repo">
+    <div class="repoadd" style="width:40%; float: left;margin-left: 30%;">
+      <h1>Delete Questions </h1>
+      <br> <br>
+  
+        <div class="repotext">
+          <label class="form-sub-label" for="input_11_month" id="sublabel_11_month" style="min-height:13px"
+            aria-hidden="false"> Select Test: &nbsp;&nbsp; </label>
+          <span class="form-sub-label-container" style="vertical-align:top">
+            <select name="q11_dateOf[month]" id="input_11_month" class="form-dropdown validate[required]"
+              data-component="birthdate-month" aria-labelledby="label_11 sublabel_11_month">
+              <option> </option>
+              <option value="Python"> Python </option>
+              <option value="Java"> Java </option>
+              <option value="March"> C++ </option>
+              <option value="Machine Learning"> Machine Learning </option>
+              <option value="Database"> Database </option>
+            </select>
+          </span>
+          <p style="margin-top:15px">Select level: &nbsp;&nbsp; <span class="form-sub-label-container" style="vertical-align:top">
+              <select name="q11_dateOf[month]" id="input_11_month" class="form-dropdown validate[required]"
+                data-component="birthdate-month" aria-labelledby="label_11 sublabel_11_month" style="width: 40%;height: 25px;">
+                <option> </option>
+                <option value="l1"> 1 </option>
+                <option value="l2"> 2 </option>
+                <option value="l3"> 3 </option>
+              </select>
+            </span></p>
+          <p>Question Id: &nbsp;&nbsp; <input name="questionId" [(ngModel)]=questionId></p><br><br>
+          <span>
+            <!-- {{questionId}} -->
+            <button class="repoaddbutton btn-danger" (click)="deleteQuestion()">Delete</button>
+          </span>
+  
+        </div>
+    </div>
+    </div>
+    </form>
+    
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  
+  </body>

@@ -1,0 +1,36 @@
+.login-container {
+  height: 150%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+  .login-img{
+    float: left;
+
+  }
+  .login-id{
+    float:right;
+  }
+  .login-form {
+    width: 400px;
+    background-color: #efeef3;
+    border-radius: 5px;
+  }
+    .form-btn-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+      a {
+        font-size: 12px;
+      }
+    
+  
+
+div.login-id{
+float: right;
+margin-right:10% ;
+margin-top: 10%;
+}

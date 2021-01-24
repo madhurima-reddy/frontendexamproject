@@ -1,0 +1,86 @@
+<body><br><br>
+  <div class="user-details-container" *ngIf="searchstu">
+      <form #searchUserFrom="ngForm" class="user-details-from">
+          <h4>View Reports</h4>
+          <div>
+              <label for="course" class="form-label">Course</label>
+         
+
+              <select class="form-control mb-3" id="course" [(ngModel)]="report.courseId" name="courseId">
+                  <option disabled value="0">Select Course</option>
+                  <option [value]="course.courseId" *ngFor="let course of courses">
+                      {{ course.courseName }}
+                  </option>
+              </select>
+          </div>
+
+          <div class="form-control-container mb-3">
+              <label for="userState" class="form-label">State</label>
+              <input type="text" class="form-control" id="userState" [(ngModel)]="report.userState" name="userState"
+                  required />
+          </div>
+
+          <div class="form-control-container mb-3">
+              <label for="userCity" class="form-label">City</label>
+              <input type="text" class="form-control" id="userCity" [(ngModel)]="report.userCity" name="userCity"
+                  required />
+          </div>
+
+          <div>
+              <label for="level" class="form-label">Level</label>
+              <select class="form-control mb-3" id="level" [(ngModel)]="report.examLevel" name="examLevel">
+                  <option disabled value="0">Select Level</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+              </select>
+          </div>
+
+          <div>
+              <label class="form-label">Marks</label>
+              <div class="d-flex">
+                  <div class="marks-input-box mr-5">
+                      <label class="form-label">From</label>
+                      <input type="text" class="form-control" id="fromRange" [(ngModel)]="report.fromRange"
+                          name="fromRange" required />
+                  </div>
+                  <div class="marks-input-box">
+                      <label class="form-label">To</label>
+
+                      <input type="text" class="form-control" id="fromRange" [(ngModel)]="report.toRange"
+                          name="toRange" required />
+                  </div>
+              </div>
+          </div>
+          <div  style="margin-left: 43%;" class="form-control-container form-btn-container mt-3">
+              <button class="btn btn-success" (click)="searchUsers()">
+                  Search Students
+              </button>
+          </div>
+
+      </form>
+  </div>
+  <div *ngIf="studentFound">
+          <table class="table border-dark ">
+              <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Mobile</th>
+                  <th>City</th>
+                  <!-- <th>Level Three Score</th> -->
+                  <th>State</th>
+              </tr>
+              <tr *ngFor="let search of searchStudents">
+                  <td>{{search.userName}}</td>
+                  <td>{{search.userEmail}}</td>
+                  <td>{{search.userPhone}}</td>
+                  <td>{{search.userCity}}</td>
+                  <td>{{search.userState}}</td>
+              </tr>
+          </table><br><br>
+          <div>
+              <div><br><br><br><br><br><br>
+                  <button class="btn-primary btn-lg" style="margin-left:47% ;" type="submit" (click)="goBack1()">Go Back</button>
+              </div>
+          </div>
+      </div><br><br>
+</body>

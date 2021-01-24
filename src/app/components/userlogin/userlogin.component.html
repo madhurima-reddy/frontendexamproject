@@ -1,0 +1,31 @@
+<body>
+  <img class="img-responsive login-img" src='assets/login.jpg' style="margin-top: 10%;width: 27%;">
+
+  <div class="login-id" style="background-color:  white">
+    <b><h2 style="background-color:  white">
+    User Login
+  </h2>
+      <p style="background-color:   white;"> If not registered please <a style="color: red;" href="http://localhost:4200/registeruser">sign up</a></p>
+    </b>
+    <!-- registeruser\registeruser.component.html -->
+    <div class="login-container" style="text-align: left;">
+      <form class="login-form p-4">
+        <div class="alert alert-danger" role="alert" *ngIf="isValidUser">Invalid Credentials!</div>
+        <div class="form-control-container mb-3">
+          <label for="txtEmail" class="form-label" name="userEmail">Email</label>
+          <input name="userEmail" [(ngModel)]=userEmail type="email" class="form-control"
+            placeholder="someone@nothing.com" id="txtEmail" />
+        </div>
+        <div class="form-control-container mb-3">
+          <label for="txtPassword" class="form-label">Password</label>
+          <input type="password" class="form-control" id="txtPassword" name="userPassword" [(ngModel)]=userPassword />
+        </div>
+        <div class="form-control-container form-btn-container">
+          <a href="forgotpassword">Forgot Password?</a>
+          <button class="btn btn-success btn-sm px-4" (click)="examHome()">Login</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <br> <br> <br> <br> <br> <br> <br>
+</body>

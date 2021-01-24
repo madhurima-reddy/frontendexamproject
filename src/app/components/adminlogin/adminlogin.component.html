@@ -1,0 +1,27 @@
+<body class="container">
+    <img class="img-responsive login-img" src='assets/adminbg.jpeg'
+      style="margin-top: 13%;width: 37%;margin-left: 4%;margin-right: 2%;">
+  
+    <div class="login-id">
+      <p style="color :black;"><b>Hi Admin, You can use the privileges after login</b></p>
+      <!-- registeruser\registeruser.component.html -->
+      <div class="login-container">
+        <form class="login-form p-4">
+          <div class="alert alert-danger" role="alert" *ngIf="isValidAdmin">Invalid Credentials!</div>
+          <div class="form-control-container mb-3">
+            <label for="txtEmail" class="form-label" name="adminEmail">Email</label>
+            <input type="email" class="form-control" placeholder="someone@nothing.com" id="txtEmail" name="adminEmail"
+              [(ngModel)]=adminEmail />
+          </div>
+          <div class="form-control-container mb-3">
+            <label for="txtPassword" class="form-label">Password</label>
+            <input type="password" class="form-control" id="txtPassword" name="adminPassword" [(ngModel)]=adminPassword />
+          </div>
+          <div class="form-control-container form-btn-container">
+            <!-- <a href="">Forgot Password?</a> -->
+            <button class="btn btn-success btn-sm px-4" (click)="onLogin()">Login</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <br> <br> <br> <br> <br><br> <br> <br>

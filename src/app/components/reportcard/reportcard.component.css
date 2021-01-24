@@ -1,0 +1,69 @@
+#pdf{
+    align-items: center;
+    
+    background-position: center center;
+    text-align: center;
+    background-position: center;
+    }
+    body {
+        background-color: (135, 206, 235);
+        padding-left:40px;
+        padding-right:40px;
+        background-image:url(src/assets/background.png);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        margin-top: -1px;
+        background-position: center center;
+        text-align: center;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        height: 100%;
+      
+      }.repo1{
+          align-self: center;
+        border:2px solid black;
+        text-align: center;
+       margin-left: 2cm;
+       margin-top: 4cm;
+       min-height: 12cm;
+       padding-top: 1cm;
+       font-size: 200%;
+       border-radius: 10px;
+    }
+    .repo2{
+        border:10px solid black;
+        border-radius: 10px;
+      margin-right: 2cm;
+       margin-top: 3cm;
+       min-height: 12cm;
+       padding-top: 1cm;
+       font-size: 200%;
+       width: 70%;
+    }
+    .repotext{
+        margin:1cm;
+        text-align:center;
+    }
+    .repo1button{
+        margin-top: 1cm;
+    border-radius: 10px;
+    font-size: 22px;
+    padding:15px 32px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    }
+    .repo2button{
+        border-radius: 10px;
+        font-size: 22px;
+        padding:15px 32px;
+        display: inline-block;
+        text-align: center;
+        cursor: pointer;
+        
+        
+    }

@@ -1,0 +1,39 @@
+<body>
+    <header>
+      <nav class="navbar navbar-default">
+        <img class="img-responsive" src="assets/logo.png" style="
+            width: 10%;
+            display: inline-block;
+            margin-left: 100px;
+            margin-top: 40px;
+          " />
+        <b>
+          <h1 style="font-size: 300%; color: white;margin-left: -30px;">
+            ONLINE EXAMINATION SYSTEM
+          </h1>
+        </b>
+        <button class="glyphicon glyphicon-log-out btn btn-info btn-lg"
+          style="font-weight: 700; background: linear-gradient(135deg, red, red)" *ngIf="userService.logflag"
+          (click)="logout()">
+          Logout</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="glyphicon glyphicon-log-out btn btn-info btn-lg"
+          style="font-weight: 700; background: linear-gradient(135deg, red, red)" *ngIf="userService.adminlogflag"
+          (click)="logout()">
+          Logout</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  
+        <div class="headerid">
+          <a href="http://localhost:4200/mainpage" style="margin-left: 70px; color: white; font-size: 23px">Home</a>
+         
+          <a [routerLink]="['/aboutus']" style="
+            margin-right: 30px;
+            margin-left: 30px;
+            color: white;
+            font-size: 23px;
+          " (click)=aboutUs()>About Us</a>
+  
+          <br /><br />
+        </div>
+      </nav>
+    </header>
+  </body>
+
